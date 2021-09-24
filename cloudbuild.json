@@ -1,0 +1,16 @@
+{
+"steps": [
+{
+    "name": "gcr.io/cloud-builders/docker",
+    "args": [
+        "build",
+        "-t",
+        "gcr.io/reliable-bruin-323211/container1",
+        "."
+    ]
+}
+],
+"images": [
+    "gcr.io/reliable-bruin-323211/container1"
+]
+}
