@@ -1,7 +1,7 @@
-FROM python:3
-WORKDIR /app
-ADD hello.py /
-RUN pip install flask
-RUN pip install flask_restful
-CMD [ "python", "./hello.py"]
-COPY . .
+FROM python:3-alpine
+WORKDIR /service
+COPY rq.txt .
+RUN pip install -r rq.txt
+COPY . ./
+EXPOSE 8080
+ENTRYPOINT ["python3", "mainapp.py"]
